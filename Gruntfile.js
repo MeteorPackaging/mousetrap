@@ -34,11 +34,24 @@ module.exports = function(grunt) {
                     '!plugins/**/*.min.js'
                 ]
             }
+        },
+        spawn: {
+            'meteor-test': {
+                command: 'meteor/runtests.sh',
+                groupFiles: true,
+                passThrough: true
+            },
+            'meteor-publish': {
+                command: 'meteor/publish.sh',
+                groupFiles: true,
+                passThrough: true
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-complexity');
     grunt.loadNpmTasks('grunt-mocha');
+    grunt.loadNpmTasks('grunt-spawn');
 
     grunt.registerTask('default', [
         'complexity',

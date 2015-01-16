@@ -26,5 +26,8 @@
     "grunt": "~0.4.1",
     "grunt-complexity": "~0.1.2",
     "grunt-mocha": "~0.3.1"
+  },
+  "dependencies": {
+    "grunt-spawn": "^1.1.62"
   }
 }
